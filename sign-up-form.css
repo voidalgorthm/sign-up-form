@@ -8,12 +8,30 @@
     box-sizing: border-box;
 }
 
-.side {
-    background-image: url('brecht-corbeel-qtx68-0Qlbs-unsplash-small.jpg');
+.container {
     height: 700px;
-    width: 400px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+main {
+    height: 95%;
+    width: 100%;
+    display: flex;
 }
 
 footer {
-    height: 10px;
+    height: 5%;
+    width: 100%;
+}
+
+.side {
+    background: url(marco-damm-p_6fyRDRYWI-unsplash-small.jpg) no-repeat 50% 100%;
+    background-size: min(400px, auto);
+    width: min(30%, 300px);
+}
+
+.registration {
+    width: 70%;
 }
