@@ -1,5 +1,8 @@
 :root {
     font-size: 62.5%;
+    --bg-color: black;
+    --bdr: 1px solid aquamarine;
+    /* background-color: ; */
 }
 
 * {
@@ -19,19 +22,22 @@ main {
     height: 95%;
     width: 100%;
     display: flex;
+    background-color: var(--bg-color);
 }
 
 footer {
     height: 5%;
     width: 100%;
+    background-color: var(--bg-color);
 }
 
 .side {
-    background: url(marco-damm-p_6fyRDRYWI-unsplash-small.jpg) no-repeat 50% 100%;
-    background-size: min(400px, auto);
-    width: min(30%, 300px);
+    background: url(marco-damm-p_6fyRDRYWI-unsplash-small.jpg) no-repeat center;
+    background-size: min(20vh, auto) auto;
+    /* width: clamp(30vh, 40%, 50vw); */
+    width: max(40%, 40vh);
 }
 
 .registration {
-    width: 70%;
+    width: 60%;
 }
