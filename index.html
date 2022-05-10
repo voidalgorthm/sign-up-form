@@ -22,35 +22,50 @@
                     <div class="member">
                         Already have an account? Log in
                     </div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia dolor ipsum unde doloremque
+                        maiores eos voluptates! Tenetur eligendi voluptates iure, labore rem neque? Fugiat quae ipsum,
+                        iure error illo rerum?</p>
                 </div>
-                <form action="" method="post" class="reg-form">
-                    <div class="name">
-                        <label for="fname">First Name:</label>
-                        <input type="text" name="first_name" id="fname">
-                        <label for="lname">Last Name:</label>
-                        <input type="text" name="last_name" id="lname">
-                    </div>
-                    <div class="email">
-                        <label for="email">Email:</label>
-                        <input type="email" name="email" id="email">
-                    </div>
-                    <div class="phone">
-                        <label for="phone_number">Phone Number:</label>
-                        <input type="tel" id="phone_number" name="phone_number">
-                    </div>
-                    <div class="user">
-                        <label for="username">Username:</label>
-                        <input type="text" name="username" id="username">
-                    </div>
-                    <div class="pass">
-                        <label for="password">Password:</label>
-                        <input type="password" name="password" id="password">
-                        <label for="cpassword">Confirm Password:</label>
-                        <input type="password" name="confirm_password" id="cpassword">
-                    </div>
+                <form id="regform" action="" method="post" class="reg-form">
+                    <fieldset>
+                        <legend>User Details</legend>
+                        <div class="form-div">
+                            <label for="gname">Given Name:</label>
+                            <input type="text" name="given_name" id="gname" required>
+                            <span></span>
+                            <label for="lname">Last Name:</label>
+                            <input type="text" name="last_name" id="lname">
+                            <span></span>
+                        </div>
+                        <div class="form-div">
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email">
+                            <span></span>
+                        </div>
+                        <div class="form-div">
+                            <label for="phone_number">Phone Number:</label>
+                            <input type="tel" id="phone_number" name="phone_number">
+                            <span></span>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Account Information</legend>
+                        <div class="form-div">
+                            <label for="username">Username:</label>
+                            <input type="text" name="username" id="username">
+                            <span></span>
+                        </div>
+                        <div class="form-div">
+                            <label for="password">Password:</label>
+                            <input type="password" name="password" id="password">
+                            <span></span>
+                            <label for="cpassword">Confirm Password:</label>
+                            <input type="password" name="confirm_password" id="cpassword">
+                            <span></span>
+                    </fieldset>
                 </form>
                 <div class="confirmation">
-                    <button class="create" type="submit" id="confirm">Create Account</button>
+                    <button class="control" type="submit" id="confirm">Create Account</button>
                 </div>
             </div>
         </main>
