@@ -5,7 +5,7 @@
     --def-bdr: 2px solid #eee;
     --thm-bdr: 2px solid #99ece6;
     --thm-clr: #99ece6;
-    
+
 }
 
 * {
@@ -14,12 +14,9 @@
     box-sizing: border-box;
 }
 
-.container {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-flow: row wrap;
-
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 /* main {
@@ -35,6 +32,14 @@ footer {
     position: sticky;
     background-color: var(--bg-clr);
 } */
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: row wrap;
+
+}
 
 .picture {
     background: url(marco-damm-p_6fyRDRYWI-unsplash-medium.jpg) no-repeat center;
@@ -187,4 +192,9 @@ button:hover,
 button:focus {
     color: var(--bg-clr);
     background-color: var(--thm-clr);
+}
+
+.login:hover,
+.login:focus {
+    color: var(--thm-clr);
 }
