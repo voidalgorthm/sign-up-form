@@ -1,9 +1,11 @@
 :root {
     font-size: 62.5%;
-    --bg-color: black;
-    --bdr: 1px solid aquamarine;
-    --fnt-color: white;
-    /* background-color: ; */
+    --fnt-clr: rgba(223, 215, 215, 0.849);
+    --bg-clr: rgba(10, 10, 10, 1);
+    --def-bdr: 2px solid #eee;
+    --thm-bdr: 2px solid #99ece6;
+    --thm-clr: #99ece6;
+    
 }
 
 * {
@@ -16,99 +18,117 @@
     height: 100vh;
     width: 100vw;
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    flex-flow: row wrap;
+
 }
 
-main {
+/* main {
     height: calc(100vh - 5%);
     width: 100%;
     display: flex;
-    background-color: var(--bg-color);
+    background-color: var(--bg-clr);
 }
 
 footer {
     height: 5%;
     width: 100%;
-    background-color: var(--bg-color);
-}
+    position: sticky;
+    background-color: var(--bg-clr);
+} */
 
-.side {
-    background: url(marco-damm-p_6fyRDRYWI-unsplash-small.jpg) no-repeat center;
-    background-size: min(20vh, auto) auto;
-    /* width: clamp(30vh, 40%, 50vw); */
-    width: min(30vw, 100%);
+.picture {
+    background: url(marco-damm-p_6fyRDRYWI-unsplash-medium.jpg) no-repeat center;
+    background-size: auto;
+    width:
+        /* min(40vw, 100%); */
+        40vw;
 }
 
 .registration {
-    width: min(70vw, 100%);
+    width:
+        /* min(60vw, 100%); */
+        60vw;
     display: flex;
-    flex-direction: column;
-    color: var(--fnt-color);
+    flex-flow: column nowrap;
+    background-color: var(--bg-clr);
+    color: var(--fnt-clr);
 }
 
 .bulletin,
 .reg-form,
-.confirmation {
-    padding: 0 4rem;
+.control {
+    padding: 0 3vw;
 }
 
 .bulletin {
-    height: 15%;
+    height: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-size: 1.5rem;
 }
 
 .reg-form {
     height: 70%;
 }
 
-.confirmation {
-    height: 15%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.control {
+    height: 10%;
+    font-size: 2rem;
 }
 
-fieldset {
-    padding: 1rem 2rem;
-}
-
-legend {
-    color: black;
-    background: white;
-    padding: .5rem 1rem;
-}
-
-fieldset>div.form-div {
+.fill {
+    height: 80%;
     display: flex;
     flex-flow: row wrap;
+    gap: 3rem;
 }
 
-button,
-input {
-    display: block;
+.confirmation {
+    height: 20%;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+div.form-div {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 1rem;
+    width: 45%;
+}
+
+div.form-div:last-child {
+    margin-bottom: 0;
+}
+
+input,
+label {
     font-family: inherit;
-    font-size: 100%;
+    font-size: 2rem;
     width: 100%;
-    /* padding: 5px; */
     height: 3rem;
 }
 
 label {
+    /* width: 40%; */
     height: 2rem;
 }
 
 input {
-    box-shadow: inset 1px 1px 3px #ccc;
-    border-radius: 5px;
+    border-radius: .5rem;
+    border: var(--def-bdr);
 }
 
 input:hover,
-input:focus {
+input:focus,
+input:valid {
     background-color: #eee;
+}
+
+input:valid {
+    border: var(--thm-bdr);
 }
 
 input+span {
@@ -116,20 +136,26 @@ input+span {
 }
 
 input:required+span::after {
-    font-size: 0.7rem;
+    font-size: 1rem;
     position: absolute;
     content: "required";
-    color: white;
-    background-color: black;
-    padding: 5px 10px;
-    top: -26px;
-    left: -70px;
+    color: black;
+    background-color: red;
+    padding: .5rem 1rem;
+    border-radius: 50%;
+    top: -2.5rem;
+    left: -6rem;
+}
+
+input:required:valid+span::after {
+    background-color: lightgreen;
 }
 
 input+span::before {
     position: absolute;
-    right: -20px;
-    top: 5px;
+    right: -1.5rem;
+    top: .5rem;
+    font-size: 1.5rem;
 }
 
 input:invalid {
@@ -143,10 +169,22 @@ input:invalid+span::before {
 
 input:valid+span::before {
     content: '✓';
-    color: green;
+    color: lightgreen;
 }
 
 button {
-    width: 60%;
-    margin: 0 auto;
+    /* height: 4rem; */
+    color: var(--thm-clr);
+    background-color: var(--bg-clr);
+    border: var(--thm-bdr);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+button:hover,
+button:focus {
+    color: var(--bg-clr);
+    background-color: var(--thm-clr);
 }

@@ -12,66 +12,68 @@
 
 <body>
     <div class="container">
-        <main>
-            <div class="side">
-                <div class="logo"></div>
+        <!-- <main> -->
+        <div class="picture">
+            <div class="logo"></div>
+        </div>
+        <div class="registration">
+            <div class="bulletin">
+                <h1>Join Us</h1>
+
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia dolor ipsum unde doloremque
+                    maiores eos voluptates! Tenetur eligendi voluptates iure, labore rem neque? Fugiat quae ipsum,
+                    iure error illo rerum?</p>
             </div>
-            <div class="registration">
-                <div class="bulletin">
-                    <h1>Join Us</h1>
-                    <div class="member">
-                        Already have an account? Log in
+            <form id="regform" action="" method="post" class="reg-form">
+                <div class="fill">
+                    <div class="form-div">
+                        <label for="gname">Given Name:</label>
+                        <input type="text" id="gname" name="given_name" required>
+                        <span></span>
                     </div>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia dolor ipsum unde doloremque
-                        maiores eos voluptates! Tenetur eligendi voluptates iure, labore rem neque? Fugiat quae ipsum,
-                        iure error illo rerum?</p>
+                    <div class="form-div">
+                        <label for="lname">Last Name:</label>
+                        <input type="text" id="lname" name="last_name">
+                        <span></span>
+                    </div>
+                    <div class="form-div">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        <span></span>
+                    </div>
+                    <div class="form-div">
+                        <label for="phone_number">Phone Number:</label>
+                        <input type="tel" id="phone_number" name="phone_number">
+                        <span></span>
+                    </div>
+                    <div class="form-div">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required>
+                        <span></span>
+                    </div>
+                    <div class="form-div">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                        <span></span>
+                    </div>
+                    <div class="form-div">
+                        <label for="cpassword">Confirm Password:</label>
+                        <input type="password" id="cpassword" name="confirm_password" required>
+                        <span></span>
+                    </div>
                 </div>
-                <form id="regform" action="" method="post" class="reg-form">
-                    <fieldset>
-                        <legend>User Details</legend>
-                        <div class="form-div">
-                            <label for="gname">Given Name:</label>
-                            <input type="text" name="given_name" id="gname" required>
-                            <span></span>
-                            <label for="lname">Last Name:</label>
-                            <input type="text" name="last_name" id="lname">
-                            <span></span>
-                        </div>
-                        <div class="form-div">
-                            <label for="email">Email:</label>
-                            <input type="email" name="email" id="email">
-                            <span></span>
-                        </div>
-                        <div class="form-div">
-                            <label for="phone_number">Phone Number:</label>
-                            <input type="tel" id="phone_number" name="phone_number">
-                            <span></span>
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Account Information</legend>
-                        <div class="form-div">
-                            <label for="username">Username:</label>
-                            <input type="text" name="username" id="username">
-                            <span></span>
-                        </div>
-                        <div class="form-div">
-                            <label for="password">Password:</label>
-                            <input type="password" name="password" id="password">
-                            <span></span>
-                            <label for="cpassword">Confirm Password:</label>
-                            <input type="password" name="confirm_password" id="cpassword">
-                            <span></span>
-                    </fieldset>
-                </form>
                 <div class="confirmation">
-                    <button class="control" type="submit" id="confirm">Create Account</button>
+                    <button id="confirm" class="button" type="submit">Create Account</button>
                 </div>
+            </form>
+            <div class="control">
+                Already have an account? Log in
             </div>
-        </main>
-        <footer><a
+        </div>
+        <!-- </main> -->
+        <!--  <footer><a
                 href="https://unsplash.com/photos/p_6fyRDRYWI?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink">Link</a>
-        </footer>
+        </footer> -->
     </div>
 </body>
 
