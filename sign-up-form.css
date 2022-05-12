@@ -1,8 +1,9 @@
 :root {
     font-size: 62.5%;
-    --fnt-clr: rgba(223, 215, 215, 0.849);
+    --fnt-clr: cornsilk;
+    --h-clr: aqua;
     --bg-clr: rgba(10, 10, 10, 1);
-    --def-bdr: 2px solid #eee;
+    --def-bdr: 2px solid #ddd;
     --thm-bdr: 2px solid #99ece6;
     --thm-clr: #99ece6;
 
@@ -47,6 +48,27 @@ footer {
     width:
         /* min(40vw, 100%); */
         40vw;
+    position: relative;
+}
+
+.logo {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 7rem;
+    width: 100%;
+    position: absolute;
+    top: 70%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo>img {
+    height: 7rem;
+}
+
+.logo>h1 {
+    color: var(--h-clr);
 }
 
 .registration {
@@ -129,7 +151,7 @@ input {
 input:hover,
 input:focus,
 input:valid {
-    background-color: #eee;
+    background-color: #ddd;
 }
 
 input:valid {
