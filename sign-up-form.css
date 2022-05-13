@@ -77,77 +77,68 @@ footer {
     width:
         /* min(60vw, 100%); */
         60vw;
+    /* height: 100vh; */
     display: flex;
     flex-flow: column nowrap;
     background-color: var(--bg-clr);
     color: var(--fnt-clr);
-}
-
-.bulletin,
-.reg-form,
-.control {
+    gap: 2rem;
     padding: 0 3vw;
 }
 
+/* .bulletin,
+.reg-form,
+.control {
+    
+} */
+
 .bulletin {
-    height: 20%;
+    height: 15%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     font-size: 1.5rem;
 }
 
 .reg-form {
-    height: 70%;
-}
-
-.control {
-    height: 10%;
-    font-size: 2rem;
-}
-
-.fill {
-    height: 80%;
+    height: auto;
     display: flex;
     flex-flow: row wrap;
     gap: 3rem;
 }
 
-.confirmation {
-    height: 20%;
+.control {
+    height: 10%;
+    font-size: 2rem;
     display: flex;
-    align-items: center;
-    /* justify-content: center; */
+    /* align-items: center; */
+    flex-flow: column nowrap;
+    gap: 1rem;
 }
 
 div.form-div {
     display: flex;
     flex-flow: row wrap;
-    margin-bottom: 1rem;
     width: 45%;
 }
 
-div.form-div:last-child {
-    margin-bottom: 0;
-}
-
-input,
 label {
-    font-family: inherit;
-    font-size: 2rem;
     width: 100%;
-    height: 3rem;
-}
-
-label {
-    /* width: 40%; */
     height: 2rem;
+    font-size: 2rem;
+    /* font-family: inherit; */
 }
 
 input {
+    width: 98%;
+    height: 3rem;
     border-radius: .5rem;
     border: var(--def-bdr);
+}
+
+div.form-div>span {
+    width: 2%;
 }
 
 input:hover,
@@ -173,7 +164,7 @@ input:required+span::after {
     padding: .5rem 1rem;
     border-radius: 50%;
     top: -2.5rem;
-    left: -6rem;
+    left: -5.5rem;
 }
 
 input:required:valid+span::after {
@@ -182,7 +173,7 @@ input:required:valid+span::after {
 
 input+span::before {
     position: absolute;
-    right: -1.5rem;
+    right: -1rem;
     top: .5rem;
     font-size: 1.5rem;
 }
@@ -202,7 +193,6 @@ input:valid+span::before {
 }
 
 button {
-    /* height: 4rem; */
     color: var(--thm-clr);
     background-color: var(--bg-clr);
     border: var(--thm-bdr);
@@ -223,7 +213,17 @@ button:focus {
     color: var(--thm-clr);
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
+    div.form-div {
+        width: 100%;
+    }
+
+    input {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
     .container {
         height: auto;
         flex-flow: column;
@@ -240,5 +240,17 @@ button:focus {
     .logo {
         width: 100vw;
         position: static;
+    }
+
+    .registration {
+        width: auto;
+    }
+
+    input {
+        width: 95%;
+    }
+
+    label {
+        width: 95%;
     }
 }
