@@ -1,11 +1,11 @@
 :root {
     font-size: 62.5%;
     --fnt-clr: cornsilk;
-    --h-clr: aqua;
+    --h-clr: #f4bf5f;
     --bg-clr: rgba(10, 10, 10, 1);
-    --def-bdr: 2px solid #ddd;
-    --thm-bdr: 2px solid #99ece6;
-    --thm-clr: #99ece6;
+    --def-bdr: 2px solid #f4bf5f;
+    --thm-bdr: 2px solid #fdd500;
+    --thm-clr: #fdd500;
 
 }
 
@@ -13,6 +13,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
 
 a {
@@ -39,12 +40,13 @@ footer {
     width: 100vw;
     display: flex;
     flex-flow: row wrap;
-
 }
 
 .picture {
-    background: url(marco-damm-p_6fyRDRYWI-unsplash-medium.jpg) no-repeat center;
-    background-size: auto;
+    background: url(https://images.unsplash.com/photo-1550639264-38c3059c4620?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100vw auto;
     width:
         /* min(40vw, 100%); */
         40vw;
@@ -52,11 +54,11 @@ footer {
 }
 
 .logo {
-    background-color: rgba(0, 0, 0, 0.7);
-    height: 7rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: auto;
     width: 100%;
     position: absolute;
-    top: 70%;
+    top: 80%;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -219,4 +221,24 @@ button:focus {
 .login:hover,
 .login:focus {
     color: var(--thm-clr);
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        height: auto;
+        flex-flow: column;
+        text-align: center;
+    }
+
+    .picture {
+        width: 100vw;
+        height: 15vh;
+        background-size: 100vw;
+        display: flex;
+    }
+
+    .logo {
+        width: 100vw;
+        position: static;
+    }
 }
