@@ -58,7 +58,7 @@ h1 {
     height: auto;
     width: 100%;
     position: absolute;
-    top: 80%;
+    top: 10%;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -117,8 +117,9 @@ div.form-div {
 
 label {
     width: 100%;
-    height: 2.5rem;
-    font-size: 2rem;
+    height: 2rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
 }
 
 input {
